@@ -65,6 +65,10 @@
         }
     }
 
+    &__btn {
+        width: 140px;
+    }
+
     &__socials {
         @extend %flexItemCenter;
         gap: 12px;
