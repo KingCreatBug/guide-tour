@@ -1,0 +1,20 @@
+.btn {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 99px;
+
+    background: var(--primary-color-bg);
+    border: 1px solid var(--primary-color-btn);
+
+    color: var(--primary-color-btn);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.75;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #fff;
+        background: var(--primary-color-btn);
+    }
+}
