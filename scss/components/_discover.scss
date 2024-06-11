@@ -8,15 +8,39 @@
 .discover {
     margin-top: 150px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 100px;
+    }
+
     &__title {
         width: 47%;
         text-align: center;
         margin: 0 auto;
+
+        @include abstracts.screen(xxl) {
+            width: 60%;
+        }
+
+        @include abstracts.screen(xl) {
+            width: 70%;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 90%;
+        }
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
     }
 }
 
 .discover-containers {
     margin-top: 70px;
+
+    @include abstracts.screen(lg) {
+        margin-top: 50px;
+    }
 
     &__btn {
         width: 140px;

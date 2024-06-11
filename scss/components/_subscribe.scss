@@ -9,6 +9,7 @@
     position: relative;
     margin-top: 150px;
     background: var(--second-color-bg);
+    overflow: hidden;
 
     &::after {
         content: url(../../assets/img/subscribe/bg.png);
@@ -26,6 +27,11 @@
         gap: 70px;
         padding: 100px 0;
         z-index: 2;
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            gap: 25px;
+        }
     }
 
     &__img {
@@ -33,6 +39,11 @@
         height: 300px;
         border-radius: 50%;
         object-fit: cover;
+
+        @include abstracts.screen(xl) {
+            width: 218px;
+            height: 218px;
+        }
     }
 
     &__btn {
@@ -46,6 +57,24 @@
         font-size: 1.8rem;
         font-weight: 600;
         transition: 800ms ease all;
+
+        @include abstracts.screen(xxl) {
+            padding: 15px 25px;
+        }
+
+        @include abstracts.screen(xl) {
+            position: absolute;
+            bottom: 43px;
+            right: 224px;
+        }
+
+        @include abstracts.screen(lg) {
+            right: 237px;
+        }
+
+        @include abstracts.screen(md) {
+            position: initial;
+        }
 
         &:hover {
             background: transparent;
@@ -81,6 +110,14 @@
 
 .subscribe-content {
     width: 45%;
+
+    @include abstracts.screen(lg) {
+        width: 100%;
+    }
+
+    @include abstracts.screen(md) {
+        text-align: center;
+    }
 
     &__title,
     &__desc {

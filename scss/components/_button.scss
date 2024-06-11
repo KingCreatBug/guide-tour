@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .btn {
     display: inline-block;
     padding: 8px 24px;
@@ -16,5 +18,10 @@
     &:hover {
         color: #fff;
         background: var(--primary-color-btn);
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 5px 18px;
+        font-size: 1.6rem;
     }
 }

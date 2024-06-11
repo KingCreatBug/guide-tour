@@ -1,8 +1,18 @@
+@use "../abstracts";
+
 .section-heading-lv1 {
     color: var(--text-dark);
     font-size: 5.2rem;
     font-weight: 700;
     line-height: 1.27;
+
+    @include abstracts.screen(xl) {
+        font-size: 3.8rem;
+    }
+
+    @include abstracts.screen(lg) {
+        font-size: 3.2rem;
+    }
 }
 
 .section-heading-lv2 {

@@ -8,6 +8,10 @@
 .new {
     margin-top: 185px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 135px;
+    }
+
     &__title {
         text-align: center;
     }
@@ -15,6 +19,10 @@
 
 .new-info {
     margin-top: 70px;
+
+    @include abstracts.screen(lg) {
+        margin-top: 50px;
+    }
 
     &__img {
         width: 100%;
@@ -25,6 +33,14 @@
 
         &--small {
             height: 182px;
+
+            @include abstracts.screen(lg) {
+                height: 300px;
+            }
+
+            @include abstracts.screen(md) {
+                height: 500px;
+            }
         }
     }
 

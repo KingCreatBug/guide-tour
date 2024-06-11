@@ -100,47 +100,51 @@
             <!-- Hero -->
             <div class="hero">
                 <div class="container">
-                    <section class="hero-content">
-                        <h2 class="hero-content__title">
-                            Chào mừng bạn đến với Dana tour guide association
-                        </h2>
-                        <p class="section-desc-lv1 hero-content__desc">
-                            Chúng tôi tự hào là tổ chức hỗ trợ các hướng dẫn
-                            viên du lịch tại Đà Nẵng trong nghề nghiệp của mình.
-                        </p>
-                    </section>
-                    <div class="hero-container">
-                        <div class="hero-search">
-                            <form action="" class="hero-search__form">
-                                <input
-                                    class="hero-search__input"
-                                    type="search"
-                                    name=""
-                                    id="hero-search"
-                                    placeholder="Tìm kiếm thành viên"
-                                />
-                                <button class="hero-search__btn">
-                                    <img
-                                        src="./assets/icons/search.svg"
-                                        alt=""
+                    <div class="hero__inner">
+                        <section class="hero-content">
+                            <h2 class="hero-content__title">
+                                Chào mừng bạn đến với Dana tour guide
+                                association
+                            </h2>
+                            <p class="section-desc-lv1 hero-content__desc">
+                                Chúng tôi tự hào là tổ chức hỗ trợ các hướng dẫn
+                                viên du lịch tại Đà Nẵng trong nghề nghiệp của
+                                mình.
+                            </p>
+                        </section>
+                        <div class="hero-container">
+                            <div class="hero-search">
+                                <form action="" class="hero-search__form">
+                                    <input
+                                        class="hero-search__input"
+                                        type="search"
+                                        name=""
+                                        id="hero-search"
+                                        placeholder="Tìm kiếm thành viên"
                                     />
-                                </button>
-                            </form>
-                        </div>
-                        <div id="slide" class="hero-slide">
-                            <div class="mySlides">
-                                <img
-                                    src="./assets/img/hero/slide1.jpg"
-                                    alt=""
-                                    class="hero-slide__item"
-                                />
+                                    <button class="hero-search__btn">
+                                        <img
+                                            src="./assets/icons/search.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </form>
                             </div>
-                            <div class="mySlides">
-                                <img
-                                    src="./assets/img/hero/slide2.jpg"
-                                    alt=""
-                                    class="hero-slide__item"
-                                />
+                            <div id="slide" class="hero-slide">
+                                <div class="mySlides">
+                                    <img
+                                        src="./assets/img/hero/slide1.jpg"
+                                        alt=""
+                                        class="hero-slide__item"
+                                    />
+                                </div>
+                                <div class="mySlides">
+                                    <img
+                                        src="./assets/img/hero/slide2.jpg"
+                                        alt=""
+                                        class="hero-slide__item"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -160,7 +164,7 @@
                             bạn có thể tin cậy; điều đó biến giấc mơ hướng dẫn
                             viên du lịch thành hiện thực.
                         </p>
-                        <a href="#!" class="btn service-content__btn"
+                        <a href="#!" class="btn service-content__btn d-md-none"
                             >Bắt đầu ngay</a
                         >
                     </section>
@@ -235,7 +239,9 @@
                     <div class="discover-containers">
                         <div class="row gy-3">
                             <!-- Discover Item 1 -->
-                            <article class="col-4 discover-container">
+                            <article
+                                class="col-4 col-lg-6 col-md-12 discover-container"
+                            >
                                 <img
                                     src="./assets/img/discover/discover1.jpg"
                                     alt=""
@@ -263,7 +269,9 @@
                             </article>
 
                             <!-- Discover Item 2 -->
-                            <article class="col-4 discover-container">
+                            <article
+                                class="col-4 col-lg-6 col-md-12 discover-container"
+                            >
                                 <img
                                     src="./assets/img/discover/discover2.jpg"
                                     alt=""
@@ -291,7 +299,9 @@
                             </article>
 
                             <!-- Discover Item 3 -->
-                            <article class="col-4 discover-container">
+                            <article
+                                class="col-4 col-lg-6 col-md-12 discover-container"
+                            >
                                 <img
                                     src="./assets/img/discover/discover3.jpg"
                                     alt=""
@@ -319,7 +329,9 @@
                             </article>
 
                             <!-- Discover Item 4 -->
-                            <article class="col-4 discover-container">
+                            <article
+                                class="col-4 col-lg-6 d-md-none discover-container"
+                            >
                                 <img
                                     src="./assets/img/discover/discover4.jpg"
                                     alt=""
@@ -347,7 +359,7 @@
                             </article>
 
                             <!-- Discover Item 5 -->
-                            <article class="col-4 discover-container">
+                            <article class="col-4 d-lg-none discover-container">
                                 <img
                                     src="./assets/img/discover/discover5.webp"
                                     alt=""
@@ -375,7 +387,7 @@
                             </article>
 
                             <!-- Discover Item 6 -->
-                            <article class="col-4 discover-container">
+                            <article class="col-4 d-lg-none discover-container">
                                 <img
                                     src="./assets/img/discover/discover6.jpg"
                                     alt=""
@@ -410,7 +422,7 @@
             </div>
 
             <!-- About -->
-            <div class="about">
+            <!-- <div class="about">
                 <div class="container">
                     <div class="about__inner">
                         <div class="about-left">
@@ -472,7 +484,7 @@
                         </section>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Partner -->
             <div class="partner">
@@ -567,11 +579,13 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     Tiêu chuẩn VTOS nghiệp vụ hướng dẫn du lịch
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -601,12 +615,14 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     Tiêu chuẩn VTOS nghiệp vụ đặt giữ chỗ lữ
                                     hành
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -636,11 +652,13 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     Tiêu chuẩn VTOS nghiệp vụ điều hành tour
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -670,11 +688,13 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     Tiêu chuẩn VTOS nghiệp vụ đại lý lữ hành
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -704,11 +724,13 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     Bài thuyết minh về quần đảo Hoàng Sa
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -738,11 +760,13 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     Câu lạc bộ hướng dẫn viên tiếng Pháp
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -772,12 +796,14 @@
                                 </button>
                             </div>
                             <section class="video-container__content">
-                                <h3 class="section-heading-lv2">
+                                <h3
+                                    class="video-container__title section-heading-lv2"
+                                >
                                     New South Wales, Australia: from Sydney to
                                     the Blue Mountains
                                 </h3>
                                 <p
-                                    class="video-container__desc section-desc-lv1"
+                                    class="video-container__desc section-desc-lv1 d-lg-none"
                                 >
                                     Watch the best of Sydney. In this video we
                                     presented all the beautiful things of Sydney
@@ -936,11 +962,11 @@
                 </div>
 
                 <!-- New -->
-                <div class="new">
+                <div id="new" class="new">
                     <h2 class="section-heading-lv1 new__title">Tin Tức</h2>
                     <div class="new-info">
-                        <div class="row">
-                            <article class="col-4">
+                        <div class="row gy-3">
+                            <article class="col-4 col-lg-12">
                                 <a href="#!">
                                     <img
                                         src="./assets/img/new/new1.png"
@@ -957,10 +983,10 @@
                                     </h3>
                                 </a>
                             </article>
-                            <div class="col-8">
+                            <div class="col-8 col-lg-12">
                                 <div class="row gy-3">
                                     <!-- New Item 2 -->
-                                    <article class="col-6">
+                                    <article class="col-6 col-md-12">
                                         <a href="#!">
                                             <img
                                                 src="./assets/img/new/new2.png"
@@ -979,7 +1005,7 @@
                                     </article>
 
                                     <!-- New Item 3 -->
-                                    <article class="col-6">
+                                    <article class="col-6 col-md-12">
                                         <a href="#!">
                                             <img
                                                 src="./assets/img/new/new3.jpg"
@@ -999,7 +1025,7 @@
                                     </article>
 
                                     <!-- New Item 4 -->
-                                    <article class="col-6">
+                                    <article class="col-6 d-md-none">
                                         <a href="#!">
                                             <img
                                                 src="./assets/img/new/new4.png"
@@ -1019,7 +1045,7 @@
                                     </article>
 
                                     <!-- New Item 5 -->
-                                    <article class="col-6">
+                                    <article class="col-6 d-md-none">
                                         <a href="#!">
                                             <img
                                                 src="./assets/img/new/new5.png"
@@ -1046,7 +1072,7 @@
                 </div>
 
                 <!-- Blog -->
-                <div class="blog">
+                <div id="blog" class="blog">
                     <section class="blog-content">
                         <h2 class="section-heading-lv1">
                             Bài viết của hướng dẫn viên
@@ -1057,7 +1083,7 @@
                     </section>
                     <div class="row gy-3">
                         <!-- Blog Item 1 -->
-                        <article class="col-7">
+                        <article class="col-7 col-lg-12">
                             <div class="blog-info">
                                 <a href="#!" class="blog-info__img-wrap">
                                     <img
@@ -1118,7 +1144,7 @@
                         </article>
 
                         <!-- Blog Item 2 -->
-                        <article class="col-5">
+                        <article class="col-5 col-lg-12">
                             <div class="blog-info">
                                 <a href="#!" class="blog-info__img-wrap">
                                     <img
@@ -1180,7 +1206,7 @@
                         </article>
 
                         <!-- Blog Item 3 -->
-                        <article class="col-4">
+                        <article class="col-4 col-lg-12">
                             <div class="blog-info">
                                 <a href="#!" class="blog-info__img-wrap">
                                     <img
@@ -1241,7 +1267,7 @@
                         </article>
 
                         <!-- Blog Item 4 -->
-                        <article class="col-4">
+                        <article class="col-4 d-lg-none">
                             <div class="blog-info">
                                 <a href="#!" class="blog-info__img-wrap">
                                     <img
@@ -1303,7 +1329,7 @@
                         </article>
 
                         <!-- Blog Item 5 -->
-                        <article class="col-4">
+                        <article class="col-4 d-lg-none">
                             <div class="blog-info">
                                 <a href="#!" class="blog-info__img-wrap">
                                     <img
@@ -1373,7 +1399,7 @@
                         <img
                             src="./assets/img/subscribe/subscribe1.png"
                             alt=""
-                            class="subscribe__img"
+                            class="subscribe__img d-md-none"
                         />
                         <section class="subscribe-content">
                             <h2
@@ -1382,8 +1408,8 @@
                                 Đăng ký để trở thành hội viên ngay!
                             </h2>
                             <p class="subscribe-content__desc section-desc-lv1">
-                                Hãy nhấn vào nút đăng ký ngay bên cạnh để có thể
-                                trờ thành hội viên của nhóm ngay từ bây giờ.
+                                Hãy nhấn vào nút "Đăng ký ngay" để có thể trờ
+                                thành hội viên của nhóm ngay từ bây giờ.
                             </p>
                         </section>
                         <a href="#!" class="subscribe__btn">Đăng ký ngay</a>

@@ -10,6 +10,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }

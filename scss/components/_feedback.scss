@@ -8,6 +8,11 @@
 .feedback {
     position: relative;
     margin-top: 150px;
+    overflow: hidden;
+
+    @include abstracts.screen(lg) {
+        margin-top: 100px;
+    }
 
     &::after {
         content: url(../../assets/img/feedback/bg.png);
@@ -18,18 +23,42 @@
         opacity: 0.5;
     }
 
+    &__containers {
+        position: relative;
+    }
+
     &__title {
         width: 48%;
+
+        @include abstracts.screen(lg) {
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
     }
 
     &__container {
         @extend %flexItemCenter;
-        justify-content: space-between;
         display: none;
+        justify-content: space-between;
         margin-top: -116px;
 
         &--active {
             display: flex;
+        }
+
+        @include abstracts.screen(lg) {
+            margin-top: 50px;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            position: relative;
+            margin-top: 22px;
         }
     }
 
@@ -38,6 +67,25 @@
         height: 470px;
         border-radius: 24px;
         object-fit: cover;
+
+        @include abstracts.screen(xl) {
+            width: 370px;
+            height: 370px;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 286px;
+            height: 286px;
+        }
+
+        @include abstracts.screen(md) {
+            position: absolute;
+            bottom: 10px;
+            left: 0px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+        }
     }
 }
 
@@ -45,10 +93,32 @@
     width: 45%;
     flex-shrink: 0;
 
+    @include abstracts.screen(xl) {
+        margin-top: 110px;
+    }
+
+    @include abstracts.screen(lg) {
+        margin-top: 0;
+    }
+
+    @include abstracts.screen(md) {
+        width: 100%;
+    }
+
     &__wrap {
         @extend %flexItemCenter;
         gap: 12px;
         margin-top: 30px;
+
+        @include abstracts.screen(xl) {
+            margin-top: 22px;
+        }
+
+        @include abstracts.screen(md) {
+            display: block;
+            margin-left: 68px;
+            padding-bottom: 15px;
+        }
     }
 
     &__name {
@@ -69,6 +139,10 @@
     @extend %flexItemCenter;
     gap: 30px;
     margin-top: -86px;
+
+    @include abstracts.screen(xl) {
+        margin-top: 25px;
+    }
 
     &__btn {
         @extend %flexItemCenter;

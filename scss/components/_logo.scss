@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemCenter {
     display: flex;
     align-items: center;
@@ -6,6 +8,13 @@
 .logo {
     @extend %flexItemCenter;
     gap: 6px;
+
+    @include abstracts.screen(lg) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+    }
 
     &__img {
         width: 54px;
@@ -17,5 +26,11 @@
         color: var(--text-dark);
         font-size: 2.4rem;
         font-weight: 700;
+    }
+
+    &__mobile {
+        @extend %flexItemCenter;
+        gap: 6px;
+        margin-bottom: 28px;
     }
 }

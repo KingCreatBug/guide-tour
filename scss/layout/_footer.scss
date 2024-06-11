@@ -12,12 +12,29 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding: 100px 0 30px;
+
+        @include abstracts.screen(xxl) {
+            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .footer-wrap {
     &:nth-child(3) {
         margin-left: 20px;
+
+        @include abstracts.screen(xxl) {
+            margin-left: 0;
+        }
     }
 
     &__title {
@@ -58,6 +75,10 @@
         border: 1px solid #4e53581a;
         padding: 16px;
 
+        @include abstracts.screen(md) {
+            width: 208px;
+        }
+
         &::placeholder {
             color: var(--text-gray);
             font-size: 1.6rem;
@@ -67,6 +88,10 @@
 
     &__btn {
         width: 140px;
+
+        @include abstracts.screen(md) {
+            width: 100px;
+        }
     }
 
     &__socials {

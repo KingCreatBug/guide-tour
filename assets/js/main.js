@@ -74,3 +74,103 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+/**
+ * JS toggle
+ *
+ * Cách dùng:
+ * <button class="js-toggle" toggle-target="#box" >Click</button>
+ * <div id="box">Content show/hide</div>
+ */
+window.addEventListener("template-loaded", initJsToggle);
+
+function initJsToggle() {
+    $$(".js-toggle").forEach((button) => {
+        const target = button.getAttribute("toggle-target");
+        if (!target) {
+            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+        }
+        button.onclick = (e) => {
+            e.preventDefault();
+
+            if (!$(target)) {
+                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
+            }
+            const isHidden = $(target).classList.contains("hide");
+
+            requestAnimationFrame(() => {
+                $(target).classList.toggle("hide", !isHidden);
+                $(target).classList.toggle("show", isHidden);
+            });
+        };
+        document.onclick = function (e) {
+            if (!e.target.closest(target)) {
+                const isHidden = $(target).classList.contains("hide");
+                if (!isHidden) {
+                    button.click();
+                }
+            }
+        };
+    });
+}
+
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar__item--active");
+        };
+    });
+});
+
+// JS next
+const feedbackContainers = document.querySelectorAll(".feedback__container");
+const prevButton = document.querySelector(".feedback-action__btn.prev");
+const nextButton = document.querySelector(".feedback-action__btn.next");
+let currentIndex = 0;
+
+function updateFeedbackDisplay() {
+    feedbackContainers.forEach((container, index) => {
+        if (index === currentIndex) {
+            container.classList.add("feedback__container--active");
+        } else {
+            container.classList.remove("feedback__container--active");
+        }
+    });
+}
+
+prevButton.addEventListener("click", () => {
+    currentIndex =
+        (currentIndex - 1 + feedbackContainers.length) %
+        feedbackContainers.length;
+    updateFeedbackDisplay();
+});
+
+nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % feedbackContainers.length;
+    updateFeedbackDisplay();
+});
+
+updateFeedbackDisplay();
+
+// let slide = 0;
+// const slides = document.querySelectorAll(".partner__inner a");
+// const totalSlides = slides.length;
+
+// function showSlide(index) {
+//     const partnerInner = document.getElementById("partner");
+//     partnerInner.style.transform = `translateX(${-index * 100}%)`;
+// }
+
+// function autoSlide() {
+//     slide = (slide + 1) % totalSlides;
+//     showSlide(slide);
+// }
+
+// setInterval(autoSlide, 1000);
+
+// // Initial display
+// showSlide(slide);

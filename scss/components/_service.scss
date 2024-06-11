@@ -9,15 +9,46 @@
     margin-top: 250px;
     @extend %flexItemCenter;
     gap: 210px;
+
+    @include abstracts.screen(xxl) {
+        gap: 113px;
+    }
+
+    @include abstracts.screen(lg) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+        margin-top: 100px;
+    }
 }
 
 .service-content {
     width: 35%;
+    position: relative;
+    flex-shrink: 0;
+
+    @include abstracts.screen(xxl) {
+        width: 40%;
+    }
+
+    @include abstracts.screen(lg) {
+        width: 70%;
+    }
+
+    @include abstracts.screen(md) {
+        width: 100%;
+    }
 
     &__btn {
         background: #fff;
         padding: 15px 35px;
         margin-top: 38px;
+
+        @include abstracts.screen(lg) {
+            position: absolute;
+            top: -40px;
+            right: -270px;
+        }
     }
 }
 
@@ -25,6 +56,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @include abstracts.screen(lg) {
+        gap: 15px;
+    }
 }
 
 .service-container {
@@ -36,11 +71,21 @@
     border-radius: 12px;
     transition: all 0.5s ease-out;
 
+    @include abstracts.screen(lg) {
+        width: 100%;
+        flex-direction: column;
+        padding: 18px 10px;
+    }
+
     &:hover {
         transform: translateX(100px);
         background: #fff;
         box-shadow: 0px 20px 90px 0px rgba(25, 27, 29, 0.1);
         cursor: default;
+
+        @include abstracts.screen(lg) {
+            transform: translateX(0);
+        }
     }
 
     &__icon {

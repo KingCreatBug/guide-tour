@@ -12,6 +12,22 @@
         width: 43%;
         margin: 0 auto;
         text-align: center;
+
+        @include abstracts.screen(xxl) {
+            width: 50%;
+        }
+
+        @include abstracts.screen(xl) {
+            width: 60%;
+        }
+
+        @include abstracts.screen(md) {
+            width: 80%;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 100%;
+        }
     }
 }
 
@@ -73,6 +89,19 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         margin-top: 22px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title,
+    &__desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__desc {
